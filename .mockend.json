@@ -1,35 +1,87 @@
 {
-  "Post": {
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "tag": {
-      "string": [
-        "one",
-        "two",
-        "three"
+  "faqList": [
+    {
+      "title": "Aplică pentru împrumutul Hora",
+      "items": [
+        {
+          "itemTitle": "Cum “intru în Hora”?",
+          "itemData": "Pentru a solicita un împrumut ai nevoie doar de un calculator/tabletă/smartphone şi o conexiune la internet. Dacă eşti nou în Hora, alege suma dorită şi perioada împrumutului, iar apoi urmăreşte instrucţiunile din secţiunea “Aplică acum” care te vor ajuta să înţelegi ce informaţii solicităm de la tine precum şi care sunt câmpurile obligatorii pe care trebuie să le completezi. Introdu datele necesare şi aşteaptă confirmarea noastră. Dacă eşti eligibil, noi iţi virăm banii în cont cât ai zice “Hora”! Dacă eşti client existent Hora, tot ce trebuie să faci este să intri în contul tău iar apoi să aplici pentru împrumut."
+        },
+        {
+          "itemTitle": "Care sunt documentele necesare?",
+          "itemData": "Solicitarea unui împrumut Hora Credit este rapidă şi uşoară. Pentru a primi banii în contul tău bancar, încarcă online pe site-ul <a href=\"/login\">horacredit.ro/login</a> o fotografie a cărţii de identitate.<br />Documente justificative nevoi medicale: scrisoare medicală nu mai veche de 3 luni sau trimitere medicală nu mai veche de 3 luni sau factură proformă/fiscală nu mai veche de 1 lună sau rețetă tratament nu mai veche de 1 lună.<br />Documente justificative studii: adeverință student anul în curs sau contract școlarizare anul în curs sau factură pentru manuale nu mai veche de o lună sau taxă cămin sau factură proformă/fiscală pentru curs individual."
+        },
+        {
+          "itemTitle": "Ce fac dacă nu am extras bancar?",
+          "itemData": "Dovada contului bancar o poți face prin orice document eliberat de bancă / obținut din aplicația internet banking care să ateste că tu ești titularul contului bancar."
+        },
+        {
+          "itemTitle": "Care este suma maximă pe care o pot lua?",
+          "itemData": "De la 100 Lei la 10 000 Lei cu plata în 26 rate egale până la 364 zile. Intervalul dintre plățile liniei de credit este de 14 zile."
+        },
+        {
+          "itemData": "Poţi obţine un credit pe o perioadă de 364 zile.",
+          "itemTitle": "Care este perioada maximă pentru împrumut?"
+        },
+        {
+          "itemTitle": "Cum aflu dacă împrumutul a fost aprobat?",
+          "itemData": "În urma analizei solicitării, vei fi înştiinţat prin SMS şi email. Oricând poţi accesa contul tău pe site-ul <a href=\"/login\">horacredit.ro/login</a> pentru a vedea stadiul solicitării."
+        }
       ]
     },
-    "isDraft": {
-      "boolean": {}
+    {
+      "title": "Rambursează împrumutul Hora",
+      "items": [
+        {
+          "itemTitle": "Cum rambursez împrumutul Hora?",
+          "itemData": "<ol><li>Online cu card bancar (Visa/Maestro/Mastercard) accesând <a href=\"/pay\">horacredit.ro/pay</a></li><li>Direct din cabinetul personal pe site-ul <a href=\"/login\">horacredit.ro/login</a></li><li>Transfer bancar de la cea mai apropiată sucursală a băncii Dumneavoastră sau utilizați serviciul internet banking pentru a rambursa împrumutul HORA.</li><li>La cea mai apropiată locație SelfPay, prin plată direct la terminal.</li></ol><br/>Mai multe informații despre plata împrumutului HORA poți găsi la <a href=\"/pay\">horacredit.ro/pay</a>"
+        },
+        {
+          "itemTitle": "Pot prelungi perioada împrumutului?",
+          "itemData": "Da. Poți beneficia de extinderea automată a perioadei împrumutului cu un număr de zile egal cu perioada inițială, pentru împrumuturile cu valoare de până la 3 000 Lei. Pentru credite de la 100 la 10 000 Lei pe o perioadă de 70 de zile, se poate extinde perioada cu 14 zile. Extinderea perioadei împrumutului împreună cu perioada inițială nu poate depăși 364 de zile, dacă nu este altfel menționat în contract."
+        },
+        {
+          "itemTitle": "Pot achita înainte de termen?",
+          "itemData": "La Hora Credit poţi rambursa anticipat orice împrumut, cu ZERO costuri suplimentare. Dacă problemele tale financiare s-au terminat mai devreme decât ai anticipat, sau cine ştie, poate ai câştigat potul cel mare la Loto şi vrei să rambursezi creditul înainte de termen, ne poţi solicita telefonic suma totală de plată sau poți vizualiza informația în contul tău pe <a href=\"/login\">horacredit.ro/login</a>"
+        }
+      ]
     },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
+    {
+      "title": "Alte întrebări",
+      "items": [
+        {
+          "itemTitle": "Când se face transferul banilor?",
+          "itemData": "Transferul se poate realiza în 15 minute de la aprobarea cererii de împrumut, dar nu mai târziu de 24 ore lucrătoare.<br />Creditarea contului deschis de către tine la una dintre băncile cu care Hora colaborează se face astfel: (i) Transfer bancar într-un cont deschis la BCR – în aceeași zi,indiferent că este zi nelucrătoare; (ii) serviciul de transfer pe card deschis la Libra Bank – în aceeași zi, de regulă în 30 de minute,indiferent că este zi nelucrătoare;<br />În cazul în care nu ai un cont deschis la una dintre cele două bănci menționate mai sus, Hora se află în imposibilitatea de a-ți comunica data la care contul tău va fi creditat, întrucât procesarea plăților se face în conformitate cu politica fiecărei bănci. În acest caz, este posibil ca data acordării împrumutului, respectiv data de la care curge dobânda aferentă împrumutului, să nu coincidă cu data intrării efective a sumei de bani în contul tău, iar în situația în care continui cu aplicația de solicitare a unui credit înseamnă că accepți și înțelegi în mod expres faptul că, în situația în care soliciți transferul sumei de bani la o bancă la care Hora Credit nu are cont bancar deschis, respectiv altă bancă în afară de cele menționate mai sus, există posibilitatea ca tranzacția să fie procesată la o dată ulterioară, în conformitate cu politica băncii la care este deschis contul tău."
+        },
+        {
+          "itemTitle": "Cum pot obține împrumutul cu dobândă *0%?",
+          "itemData": "Singura condiție pentru a obține un împrumut cu *0% dobândă este să fii client nou HORA. Perioada de împrumut pentru dobândă *0% este de la 1 la 7 de zile, suma împrumutată - de la 100 la 10 000 de Lei.<br />*0% dobândă se referă la o dobândă de 0,0001%."
+        },
+        {
+          "itemTitle": "Cum pot obține împrumutul cu dobândă 0,08%?",
+          "itemData": "Singura condiție pentru a obține un împrumut cu 0,08% dobândă este să fii client nou HORA. Perioada de împrumut pentru o dobândă de 0,08% este de 70 de zile, suma - de la 100 la 10 000 de Lei."
+        },
+        {
+          "itemTitle": "Cine poate împrumuta?",
+          "itemData": "Orice persoană rezidentă în România cu vârsta cuprinsă între 19 şi 75 ani, poate aplica pentru un împrumut la Hora Credit IFN S.A."
+        },
+        {
+          "itemTitle": "De ce avem nevoie de informații cu caracter personal?",
+          "itemData": "Informaţiile cu caracter personal sunt obligatorii în procesul de evaluare a cererii de împrumut."
+        },
+        {
+          "itemTitle": "Sunt datele mele personale în siguranță?",
+          "itemData": "Hora Credit IFN S.A. este o entitate juridică legală, funcționând în baza Legii 93/2009, a Regulamentului BNR nr. 20/2009 și care respectă cerințele Regulamentului (UE) 2016/679 (“GDPR”), aplicabil de la 25 Mai 2018. Astfel, datele tale cu caracter personal sunt protejate conform cerințelor legislative în vigoare și vor fi utilizate numai pentru scopurile declarate."
+        },
+        {
+          "itemTitle": "Poate solicita altcineva un împrumut în numele meu?",
+          "itemData": "Hora Credit IFN S.A. subliniază importanţa păstrării informaţiilor tale confidenţiale. Împrumutul se acordă numai titularului solicitării aprobate şi care face dovada identităţii."
+        },
+        {
+          "itemTitle": "Cum adresez o reclamație?",
+          "itemData": "SCOPUL<br/>Prezenta procedură reglementează procesul de soluționare a reclamațiilor primite de la  împrumutați, persoane care beneficiază de produse oferite de Hora Credit IFN S.A. sau potențiali împrumutați.<br/><br/>MODALITĂȚILE DE ADRESARE A RECLAMAȚIEI<br/>Reclamațiile pot fi înaintate de către împrumutat în oricare din următoarele modalități:<ol><li>Prin poștă sau curier la sediul Hora Credit IFN S.A., Splaiul Unirii, nr. 16, Clădirea Muntenia, Etaj 2, Sectorul 4, Bucureşti</li><li>Pe adresele de email ale Hora Credit IFN S.A. (<a href=\"mailto:info@horacredit.ro\">info@horacredit.ro</a>) care pot fi indetificate accesând linkul <a href=\"/contacts\">horacredit.ro/contacts</a>;</li><li>Telefonic la numerele de telefon afișate pe site <a href=\"tel:+40 318 10 10 72\">+40 318 10 10 72</a> și <a href=\"tel:+40 318 18 18 18\">+40 318 18 18 18</a></li></ol><br/><br/>Reclamațiile trebuie să conțină datele de identificare ale împrumutatului (nume, prenume, codul numeric personal, număr de telefon, adresa de corespondență și/sau adresa de e-mail), obiectul reclamației (detalii cu privire la activitatea sau produsul reclamat) și/sau orice alte documente sau informații relevante.<br/>Termenul de soluționare a reclamației, respectiv de transmitere a răspunsului cu privire la aspectele reclamate este de maxim 30 de zile de la primirea reclamației de către Hora Credit IFN S.A.<br/>Răspunsul la reclamația împrumutatului se va transmite în mod verbal, în scris, pe e-mail, curier, în funcție de solicitarea împrumutatului  dar și de modalitatea de transmitere a reclamației.<br/><br/>LITIGII<br/>Pentru orice litigiu ce decurge din sau în legatură cu reclamația sa și care nu s-a soluționat pe cale amiabilă, împrumutatul poate solicita procedura de mediere sau se poate adresa Autorității Naționale pentru Protecția Consumatorilor.<br/>De asemenea, clientul are dreptul să adreseze plângeri instanțelor competente."
+        }
+      ]
     }
-  }
+  ]
 }
