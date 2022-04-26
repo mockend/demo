@@ -1,0 +1,28 @@
+{
+     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjRhNGE5NGM2NjczOGYxMzg1NGI0NzQiLCJ1c2VybmFtZSI6ImFtcnpha2kiLCJpYXQiOjE2NTA5ODU0MDl9.EptG_kF70u_GB63quvTg4Fw9m3M_kfwd19P3zu4-Lzo",
+     "user" : {
+       bio: "",
+       birth_date: "2000-10-17T00:00:00.000Z",
+       cover_image_url: "",
+       created_at: "2022-04-24T00:29:24.967Z",
+       email: "amrzaki2000.az@gmail.com",
+       followers_count: 1,
+       following_count: 4,
+       id: "624a4a94c66738f13854b474",
+       isBanned: false,
+       isVerified: true,
+       likes_count: 4,
+       location: "",
+       month_day_access: "Your Followers",
+       name: "Amr Zaki",
+       profile_image_url: "https://pbs.twimg.com/profile_images/1492532221110104067/_3ozwoyh_400x400.jpg",
+       role: "User",
+       tweets_count: 38,
+       username: "amrzaki",
+       website: "",
+       year_access: "Your Followers",
+     },
+     "token_expiration_date": "2020-01-01T00:00:00.000Z",
+     "message": "User logged in successfully"
+}
+
