@@ -1,35 +1,916 @@
 {
   "Post": {
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
     "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
+      "string": {}
     },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "tag": {
-      "string": [
-        "one",
-        "two",
-        "three"
-      ]
-    },
-    "isDraft": {
-      "boolean": {}
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
+    "comments": {
+      "hasMany": "Comment"
     }
+  },
+  "recommended": {
+    "populars": [
+      {
+        "id": 45,
+        "image": "https://via.placeholder.com/640x480.png/00dd55?text=aspernatur",
+        "title": "Davis-Langworth",
+        "description": "Iure voluptas et qui laudantium magnam. Libero error unde et id. Soluta non eos nihil.",
+        "date": "1982-02-25",
+        "url": "http://purdy.org/quo-est-blanditiis-dolores-recusandae",
+        "is_popular": true,
+        "created_at": "2022-04-04T14:43:00.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 9
+      },
+      {
+        "id": 72,
+        "image": "https://via.placeholder.com/640x480.png/00ffff?text=officiis",
+        "title": "Mertz, Purdy and Barrows",
+        "description": "Pariatur doloribus excepturi perferendis dolor dignissimos dolor non. Ea amet dignissimos quia quidem dolores. Maxime dicta modi quidem velit.",
+        "date": "1970-07-05",
+        "url": "http://www.senger.com/harum-officia-et-accusantium-nesciunt",
+        "is_popular": true,
+        "created_at": "2021-08-28T00:55:54.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 15
+      },
+      {
+        "id": 9,
+        "image": "https://via.placeholder.com/640x480.png/00ddaa?text=et",
+        "title": "Hagenes Inc",
+        "description": "Vel placeat assumenda laboriosam ut est. Ea impedit distinctio aperiam dolor est sunt beatae eum. Fuga reprehenderit fuga sit ratione ullam.",
+        "date": "1977-04-11",
+        "url": "https://rempel.com/rerum-aperiam-facilis-numquam-ullam-est-qui.html",
+        "is_popular": true,
+        "created_at": "2021-05-16T13:14:17.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 2
+      }
+    ],
+    "latest": [
+      {
+        "id": 45,
+        "image": "https://via.placeholder.com/640x480.png/00dd55?text=aspernatur",
+        "title": "Davis-Langworth",
+        "description": "Iure voluptas et qui laudantium magnam. Libero error unde et id. Soluta non eos nihil.",
+        "date": "1982-02-25",
+        "url": "http://purdy.org/quo-est-blanditiis-dolores-recusandae",
+        "is_popular": true,
+        "created_at": "2022-04-04T14:43:00.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 9
+      },
+      {
+        "id": 68,
+        "image": "https://via.placeholder.com/640x480.png/003311?text=ipsa",
+        "title": "Balistreri Inc",
+        "description": "Aut rerum ex repudiandae aliquid sapiente veritatis. Repudiandae quisquam ipsum ut odio necessitatibus et deleniti. Placeat blanditiis nesciunt ea consequatur error quia consectetur aut. Explicabo deserunt quibusdam impedit dicta quibusdam.",
+        "date": "1982-08-03",
+        "url": "http://www.cummings.net/rerum-qui-nisi-quaerat-rem-voluptas-ea",
+        "is_popular": false,
+        "created_at": "2022-03-29T07:21:05.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 14
+      },
+      {
+        "id": 72,
+        "image": "https://via.placeholder.com/640x480.png/00ffff?text=officiis",
+        "title": "Mertz, Purdy and Barrows",
+        "description": "Pariatur doloribus excepturi perferendis dolor dignissimos dolor non. Ea amet dignissimos quia quidem dolores. Maxime dicta modi quidem velit.",
+        "date": "1970-07-05",
+        "url": "http://www.senger.com/harum-officia-et-accusantium-nesciunt",
+        "is_popular": true,
+        "created_at": "2021-08-28T00:55:54.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 15
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": 1,
+      "image": "https://via.placeholder.com/80x80.png/009955?text=vitae",
+      "name": "Connelly, Reichert and Huel",
+      "badge": "MidnightBlue",
+      "is_featured": false
+    },
+    {
+      "id": 2,
+      "image": "https://via.placeholder.com/80x80.png/0033ee?text=itaque",
+      "name": "Collins-Lubowitz",
+      "badge": null,
+      "is_featured": false
+    },
+    {
+      "id": 3,
+      "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+      "name": "Steuber-Cassin",
+      "badge": "PeachPuff",
+      "is_featured": false
+    },
+    {
+      "id": 4,
+      "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+      "name": "Will Group",
+      "badge": "PaleGoldenRod",
+      "is_featured": false
+    },
+    {
+      "id": 5,
+      "image": "https://via.placeholder.com/80x80.png/0011ee?text=iste",
+      "name": "Kemmer, Paucek and Bergnaum",
+      "badge": null,
+      "is_featured": false
+    },
+    {
+      "id": 6,
+      "image": "https://via.placeholder.com/80x80.png/0055aa?text=non",
+      "name": "Baumbach and Sons",
+      "badge": null,
+      "is_featured": false
+    },
+    {
+      "id": 7,
+      "image": "https://via.placeholder.com/80x80.png/00ddcc?text=officia",
+      "name": "Leuschke Group",
+      "badge": null,
+      "is_featured": false
+    },
+    {
+      "id": 8,
+      "image": "https://via.placeholder.com/80x80.png/004444?text=aut",
+      "name": "Mohr Ltd",
+      "badge": "Gainsboro",
+      "is_featured": false
+    },
+    {
+      "id": 9,
+      "image": "https://via.placeholder.com/80x80.png/003399?text=voluptas",
+      "name": "Gibson-Simonis",
+      "badge": "MediumVioletRed",
+      "is_featured": false
+    },
+    {
+      "id": 10,
+      "image": "https://via.placeholder.com/80x80.png/006699?text=possimus",
+      "name": "Bradtke, Durgan and Wisozk",
+      "badge": "SpringGreen",
+      "is_featured": false
+    },
+    {
+      "id": 11,
+      "image": "https://via.placeholder.com/80x80.png/005544?text=minus",
+      "name": "Wilkinson-Volkman",
+      "badge": "Gold",
+      "is_featured": true
+    },
+    {
+      "id": 12,
+      "image": "https://via.placeholder.com/80x80.png/000011?text=aspernatur",
+      "name": "Cruickshank Group",
+      "badge": "DarkGray",
+      "is_featured": true
+    },
+    {
+      "id": 13,
+      "image": "https://via.placeholder.com/80x80.png/009977?text=modi",
+      "name": "Simonis PLC",
+      "badge": null,
+      "is_featured": true
+    },
+    {
+      "id": 14,
+      "image": "https://via.placeholder.com/80x80.png/00cc33?text=alias",
+      "name": "Skiles-Green",
+      "badge": "DarkGray",
+      "is_featured": true
+    },
+    {
+      "id": 15,
+      "image": "https://via.placeholder.com/80x80.png/0077ff?text=aut",
+      "name": "Powlowski-Hoeger",
+      "badge": null,
+      "is_featured": true
+    },
+    {
+      "id": 16,
+      "image": "https://via.placeholder.com/80x80.png/001100?text=non",
+      "name": "Wilkinson Ltd",
+      "badge": null,
+      "is_featured": true
+    }
+  ],
+  "cardpage1": {
+    "current_page": 1,
+    "data": [
+      {
+        "id": 13,
+        "image": "https://via.placeholder.com/640x480.png/0033ff?text=beatae",
+        "title": "Kuvalis Group",
+        "description": "Enim voluptates distinctio earum natus dolores. Impedit vero omnis veniam vero porro perspiciatis deserunt. Voluptatem et quis architecto aut quia. Dolores facere et molestiae modi non unde.",
+        "date": "1997-02-13",
+        "url": "http://romaguera.com/est-ullam-sed-aperiam-ea-aspernatur-voluptatibus",
+        "is_popular": true,
+        "created_at": "1998-11-24T08:18:22.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 14,
+        "image": "https://via.placeholder.com/640x480.png/006611?text=fuga",
+        "title": "Hills Inc",
+        "description": "Atque assumenda vel est quo dolorum. Sint optio qui distinctio error. Aut et omnis accusantium eaque neque veniam sunt.",
+        "date": "1984-01-24",
+        "url": "http://www.bednar.biz/fugit-sit-iusto-aut-nulla-quod.html",
+        "is_popular": true,
+        "created_at": "2009-09-01T13:21:39.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 15,
+        "image": "https://via.placeholder.com/640x480.png/00bb44?text=fuga",
+        "title": "Sawayn and Sons",
+        "description": "Placeat numquam tenetur est ut in tempora et. Eligendi veniam veritatis excepturi qui non sequi architecto. Atque similique dicta aliquam tempore non. Veniam assumenda sed sed ut tempore omnis expedita.",
+        "date": "1988-08-19",
+        "url": "http://www.fadel.org/ea-totam-veniam-aut-aspernatur-debitis",
+        "is_popular": true,
+        "created_at": "2009-11-26T02:04:59.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 16,
+        "image": "https://via.placeholder.com/640x480.png/000033?text=occaecati",
+        "title": "Cronin, Bechtelar and Halvorson",
+        "description": "Veniam consequatur quaerat nam ut. In ipsum dolorem eveniet autem. Qui minus impedit aperiam ut. Quia in ut aut.",
+        "date": "2018-05-23",
+        "url": "http://www.hessel.com/animi-voluptas-quo-et-reiciendis-optio-et",
+        "is_popular": true,
+        "created_at": "1996-09-13T21:50:37.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 17,
+        "image": "https://via.placeholder.com/640x480.png/003344?text=aut",
+        "title": "Friesen, Wehner and Towne",
+        "description": "Dolor amet ut dolorem et et voluptates. Facilis quis corporis veniam est doloremque. Enim impedit ab hic pariatur odit. Qui et eum cupiditate aut.",
+        "date": "1980-04-24",
+        "url": "https://greenholt.net/in-sit-omnis-nulla-voluptatum-aperiam-voluptatibus-aut.html",
+        "is_popular": true,
+        "created_at": "2007-10-28T02:27:18.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 18,
+        "image": "https://via.placeholder.com/640x480.png/001199?text=veniam",
+        "title": "Nader, Kshlerin and Grant",
+        "description": "Eum sint beatae quas. Et quia possimus corporis iusto autem ab temporibus consequatur. Sit consequatur nihil qui sit doloremque laborum rerum.",
+        "date": "2000-04-08",
+        "url": "http://stroman.com/perspiciatis-voluptatem-iste-cum-modi-non-cupiditate-quam",
+        "is_popular": false,
+        "created_at": "2018-10-08T04:01:35.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 19,
+        "image": "https://via.placeholder.com/640x480.png/0000cc?text=eos",
+        "title": "Reichel, Considine and Corkery",
+        "description": "Ut distinctio rem ut. Consequatur officiis doloremque rerum corporis.",
+        "date": "1998-08-26",
+        "url": "http://www.johnston.biz/tenetur-sit-pariatur-reprehenderit-suscipit-et-et-autem.html",
+        "is_popular": true,
+        "created_at": "2001-01-15T00:39:39.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 20,
+        "image": "https://via.placeholder.com/640x480.png/00ee11?text=nesciunt",
+        "title": "Ebert, Ledner and Macejkovic",
+        "description": "Animi quia rerum et eius facilis id aut. Omnis pariatur nemo quisquam magni voluptatem est.",
+        "date": "1993-05-09",
+        "url": "https://grady.org/fuga-nobis-labore-rem-ullam.html",
+        "is_popular": true,
+        "created_at": "2006-03-26T02:27:31.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 21,
+        "image": "https://via.placeholder.com/640x480.png/00bb99?text=error",
+        "title": "Hill LLC",
+        "description": "Alias similique sapiente rem voluptatem. Error debitis nesciunt eos laborum optio et. At magnam ipsam ipsa culpa ullam aut.",
+        "date": "1989-12-27",
+        "url": "http://www.christiansen.com/velit-dolore-accusamus-fugiat-aut-aperiam",
+        "is_popular": false,
+        "created_at": "2017-10-02T00:37:17.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 22,
+        "image": "https://via.placeholder.com/640x480.png/009966?text=officia",
+        "title": "Schmeler and Sons",
+        "description": "Maxime aperiam corrupti quos expedita. Possimus ducimus quam dolores non qui alias. Voluptatum exercitationem aliquid sunt ratione et.",
+        "date": "2020-09-30",
+        "url": "http://www.rice.info/",
+        "is_popular": false,
+        "created_at": "2017-02-18T23:42:50.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 23,
+        "image": "https://via.placeholder.com/640x480.png/0099cc?text=facere",
+        "title": "Toy-Quigley",
+        "description": "Labore amet quis tempore veritatis voluptatem consequatur asperiores qui. Quo reiciendis quo rerum qui dolorem eos. Quas dolores sit et omnis.",
+        "date": "2000-09-13",
+        "url": "http://www.walker.org/est-sapiente-est-illo-quaerat",
+        "is_popular": false,
+        "created_at": "2014-10-27T15:37:44.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 24,
+        "image": "https://via.placeholder.com/640x480.png/00ddcc?text=quo",
+        "title": "Rippin Ltd",
+        "description": "Libero hic rerum tenetur consequatur nesciunt et necessitatibus. Non voluptate molestiae recusandae reiciendis qui quo. Vitae praesentium fugit in voluptatibus id.",
+        "date": "2014-05-09",
+        "url": "https://www.kling.com/similique-cumque-in-quis",
+        "is_popular": true,
+        "created_at": "1996-02-01T16:48:23.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 5,
+        "event_category": {
+          "id": 5,
+          "image": "https://via.placeholder.com/80x80.png/0011ee?text=iste",
+          "name": "Kemmer, Paucek and Bergnaum",
+          "badge": null,
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      }
+    ],
+    "first_page_url": "http://marketing.test/api/events?page=1",
+    "from": 13,
+    "last_page": 3,
+    "last_page_url": "http://marketing.test/api/events?page=3",
+    "links": [
+      {
+        "url": "http://marketing.test/api/events?page=1",
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=1",
+        "label": "1",
+        "active": true
+      },
+      {
+        "url": "http://marketing.test/api/events?page=2",
+        "label": "2",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=3",
+        "label": "3",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=2",
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "next_page_url": "http://marketing.test/api/events?page=2",
+    "path": "http://marketing.test/api/events",
+    "per_page": 12,
+    "prev_page_url": "http://marketing.test/api/events?page=1",
+    "to": 12,
+    "total": 28
+  },
+  "cardpage2": {
+    "current_page": 2,
+    "data": [
+      {
+        "id": 14,
+        "image": "https://via.placeholder.com/640x480.png/006611?text=fuga",
+        "title": "Hills Inc",
+        "description": "Atque assumenda vel est quo dolorum. Sint optio qui distinctio error. Aut et omnis accusantium eaque neque veniam sunt.",
+        "date": "1984-01-24",
+        "url": "http://www.bednar.biz/fugit-sit-iusto-aut-nulla-quod.html",
+        "is_popular": true,
+        "created_at": "2009-09-01T13:21:39.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 15,
+        "image": "https://via.placeholder.com/640x480.png/00bb44?text=fuga",
+        "title": "Sawayn and Sons",
+        "description": "Placeat numquam tenetur est ut in tempora et. Eligendi veniam veritatis excepturi qui non sequi architecto. Atque similique dicta aliquam tempore non. Veniam assumenda sed sed ut tempore omnis expedita.",
+        "date": "1988-08-19",
+        "url": "http://www.fadel.org/ea-totam-veniam-aut-aspernatur-debitis",
+        "is_popular": true,
+        "created_at": "2009-11-26T02:04:59.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 16,
+        "image": "https://via.placeholder.com/640x480.png/000033?text=occaecati",
+        "title": "Cronin, Bechtelar and Halvorson",
+        "description": "Veniam consequatur quaerat nam ut. In ipsum dolorem eveniet autem. Qui minus impedit aperiam ut. Quia in ut aut.",
+        "date": "2018-05-23",
+        "url": "http://www.hessel.com/animi-voluptas-quo-et-reiciendis-optio-et",
+        "is_popular": true,
+        "created_at": "1996-09-13T21:50:37.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 13,
+        "image": "https://via.placeholder.com/640x480.png/0033ff?text=beatae",
+        "title": "Kuvalis Group",
+        "description": "Enim voluptates distinctio earum natus dolores. Impedit vero omnis veniam vero porro perspiciatis deserunt. Voluptatem et quis architecto aut quia. Dolores facere et molestiae modi non unde.",
+        "date": "1997-02-13",
+        "url": "http://romaguera.com/est-ullam-sed-aperiam-ea-aspernatur-voluptatibus",
+        "is_popular": true,
+        "created_at": "1998-11-24T08:18:22.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 20,
+        "image": "https://via.placeholder.com/640x480.png/00ee11?text=nesciunt",
+        "title": "Ebert, Ledner and Macejkovic",
+        "description": "Animi quia rerum et eius facilis id aut. Omnis pariatur nemo quisquam magni voluptatem est.",
+        "date": "1993-05-09",
+        "url": "https://grady.org/fuga-nobis-labore-rem-ullam.html",
+        "is_popular": true,
+        "created_at": "2006-03-26T02:27:31.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 21,
+        "image": "https://via.placeholder.com/640x480.png/00bb99?text=error",
+        "title": "Hill LLC",
+        "description": "Alias similique sapiente rem voluptatem. Error debitis nesciunt eos laborum optio et. At magnam ipsam ipsa culpa ullam aut.",
+        "date": "1989-12-27",
+        "url": "http://www.christiansen.com/velit-dolore-accusamus-fugiat-aut-aperiam",
+        "is_popular": false,
+        "created_at": "2017-10-02T00:37:17.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 17,
+        "image": "https://via.placeholder.com/640x480.png/003344?text=aut",
+        "title": "Friesen, Wehner and Towne",
+        "description": "Dolor amet ut dolorem et et voluptates. Facilis quis corporis veniam est doloremque. Enim impedit ab hic pariatur odit. Qui et eum cupiditate aut.",
+        "date": "1980-04-24",
+        "url": "https://greenholt.net/in-sit-omnis-nulla-voluptatum-aperiam-voluptatibus-aut.html",
+        "is_popular": true,
+        "created_at": "2007-10-28T02:27:18.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 18,
+        "image": "https://via.placeholder.com/640x480.png/001199?text=veniam",
+        "title": "Nader, Kshlerin and Grant",
+        "description": "Eum sint beatae quas. Et quia possimus corporis iusto autem ab temporibus consequatur. Sit consequatur nihil qui sit doloremque laborum rerum.",
+        "date": "2000-04-08",
+        "url": "http://stroman.com/perspiciatis-voluptatem-iste-cum-modi-non-cupiditate-quam",
+        "is_popular": false,
+        "created_at": "2018-10-08T04:01:35.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 19,
+        "image": "https://via.placeholder.com/640x480.png/0000cc?text=eos",
+        "title": "Reichel, Considine and Corkery",
+        "description": "Ut distinctio rem ut. Consequatur officiis doloremque rerum corporis.",
+        "date": "1998-08-26",
+        "url": "http://www.johnston.biz/tenetur-sit-pariatur-reprehenderit-suscipit-et-et-autem.html",
+        "is_popular": true,
+        "created_at": "2001-01-15T00:39:39.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 24,
+        "image": "https://via.placeholder.com/640x480.png/00ddcc?text=quo",
+        "title": "Rippin Ltd",
+        "description": "Libero hic rerum tenetur consequatur nesciunt et necessitatibus. Non voluptate molestiae recusandae reiciendis qui quo. Vitae praesentium fugit in voluptatibus id.",
+        "date": "2014-05-09",
+        "url": "https://www.kling.com/similique-cumque-in-quis",
+        "is_popular": true,
+        "created_at": "1996-02-01T16:48:23.000000Z",
+        "updated_at": "2022-05-18T15:37:12.000000Z",
+        "event_category_id": 5,
+        "event_category": {
+          "id": 5,
+          "image": "https://via.placeholder.com/80x80.png/0011ee?text=iste",
+          "name": "Kemmer, Paucek and Bergnaum",
+          "badge": null,
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 22,
+        "image": "https://via.placeholder.com/640x480.png/009966?text=officia",
+        "title": "Schmeler and Sons",
+        "description": "Maxime aperiam corrupti quos expedita. Possimus ducimus quam dolores non qui alias. Voluptatum exercitationem aliquid sunt ratione et.",
+        "date": "2020-09-30",
+        "url": "http://www.rice.info/",
+        "is_popular": false,
+        "created_at": "2017-02-18T23:42:50.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 23,
+        "image": "https://via.placeholder.com/640x480.png/0099cc?text=facere",
+        "title": "Toy-Quigley",
+        "description": "Labore amet quis tempore veritatis voluptatem consequatur asperiores qui. Quo reiciendis quo rerum qui dolorem eos. Quas dolores sit et omnis.",
+        "date": "2000-09-13",
+        "url": "http://www.walker.org/est-sapiente-est-illo-quaerat",
+        "is_popular": false,
+        "created_at": "2014-10-27T15:37:44.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      }
+    ],
+    "first_page_url": "http://marketing.test/api/events?page=1",
+    "from": 13,
+    "last_page": 3,
+    "last_page_url": "http://marketing.test/api/events?page=3",
+    "links": [
+      {
+        "url": "http://marketing.test/api/events?page=1",
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=1",
+        "label": "1",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=2",
+        "label": "2",
+        "active": true
+      },
+      {
+        "url": "http://marketing.test/api/events?page=3",
+        "label": "3",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=3",
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "next_page_url": "http://marketing.test/api/events?page=3",
+    "path": "http://marketing.test/api/events",
+    "per_page": 12,
+    "prev_page_url": "http://marketing.test/api/events?page=1",
+    "to": 24,
+    "total": 28
+  },
+  "cardpage3": {
+    "current_page": 3,
+    "data": [
+      {
+        "id": 16,
+        "image": "https://via.placeholder.com/640x480.png/000033?text=occaecati",
+        "title": "Cronin, Bechtelar and Halvorson",
+        "description": "Veniam consequatur quaerat nam ut. In ipsum dolorem eveniet autem. Qui minus impedit aperiam ut. Quia in ut aut.",
+        "date": "2018-05-23",
+        "url": "http://www.hessel.com/animi-voluptas-quo-et-reiciendis-optio-et",
+        "is_popular": true,
+        "created_at": "1996-09-13T21:50:37.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 13,
+        "image": "https://via.placeholder.com/640x480.png/0033ff?text=beatae",
+        "title": "Kuvalis Group",
+        "description": "Enim voluptates distinctio earum natus dolores. Impedit vero omnis veniam vero porro perspiciatis deserunt. Voluptatem et quis architecto aut quia. Dolores facere et molestiae modi non unde.",
+        "date": "1997-02-13",
+        "url": "http://romaguera.com/est-ullam-sed-aperiam-ea-aspernatur-voluptatibus",
+        "is_popular": true,
+        "created_at": "1998-11-24T08:18:22.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 3,
+        "event_category": {
+          "id": 3,
+          "image": "https://via.placeholder.com/80x80.png/00aa33?text=alias",
+          "name": "Steuber-Cassin",
+          "badge": "PeachPuff",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 21,
+        "image": "https://via.placeholder.com/640x480.png/00bb99?text=error",
+        "title": "Hill LLC",
+        "description": "Alias similique sapiente rem voluptatem. Error debitis nesciunt eos laborum optio et. At magnam ipsam ipsa culpa ullam aut.",
+        "date": "1989-12-27",
+        "url": "http://www.christiansen.com/velit-dolore-accusamus-fugiat-aut-aperiam",
+        "is_popular": false,
+        "created_at": "2017-10-02T00:37:17.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      },
+      {
+        "id": 19,
+        "image": "https://via.placeholder.com/640x480.png/0000cc?text=eos",
+        "title": "Reichel, Considine and Corkery",
+        "description": "Ut distinctio rem ut. Consequatur officiis doloremque rerum corporis.",
+        "date": "1998-08-26",
+        "url": "http://www.johnston.biz/tenetur-sit-pariatur-reprehenderit-suscipit-et-et-autem.html",
+        "is_popular": true,
+        "created_at": "2001-01-15T00:39:39.000000Z",
+        "updated_at": "2022-05-18T15:37:11.000000Z",
+        "event_category_id": 4,
+        "event_category": {
+          "id": 4,
+          "image": "https://via.placeholder.com/80x80.png/002222?text=sint",
+          "name": "Will Group",
+          "badge": "PaleGoldenRod",
+          "is_featured": false,
+          "created_at": "2022-05-18T15:37:11.000000Z",
+          "updated_at": "2022-05-18T15:37:11.000000Z"
+        }
+      }
+    ],
+    "first_page_url": "http://marketing.test/api/events?page=1",
+    "from": 13,
+    "last_page": 3,
+    "last_page_url": "http://marketing.test/api/events?page=3",
+    "links": [
+      {
+        "url": "http://marketing.test/api/events?page=2",
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=1",
+        "label": "1",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=2",
+        "label": "2",
+        "active": false
+      },
+      {
+        "url": "http://marketing.test/api/events?page=3",
+        "label": "3",
+        "active": true
+      },
+      {
+        "url": "http://marketing.test/api/events?page=3",
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "next_page_url": "http://marketing.test/api/events?page=2",
+    "path": "http://marketing.test/api/events",
+    "per_page": 4,
+    "prev_page_url": "http://marketing.test/api/events?page=1",
+    "to": 28,
+    "total": 28
   }
 }
