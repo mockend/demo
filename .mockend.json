@@ -1,35 +1,9 @@
 {
-  "Post": {
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "tag": {
-      "string": [
-        "one",
-        "two",
-        "three"
-      ]
-    },
-    "isDraft": {
-      "boolean": {}
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    }
-  }
+  "name": "AirTag",
+  "id": 9,
+  "Version": "Single Pack",
+  "isAvailable": "true",
+  "desc": "AirTag. Keep track of your keys, wallet, luggage, backpack, and more, all in the Find My app. Play a sound on the built-in speaker, or say \"Hey Siri, find my gym bag.\" With select iPhone models, Precision Finding can lead you right to your nearby AirTag.1 If it's further away, hundreds of millions of Apple devices in the Find My network can help track it down. All anonymously and encrypted for privacy.",
+  "imageUrl": "https://dl.airtable.com/.attachmentThumbnails/1bb99182d67fae2bd21b6af7fbd74146/c016eadf?ts=1653755695&userId=usrbI6MYZXhfZFTd4&cs=7266f74605d6e06f",
+  "Price": 29
 }
