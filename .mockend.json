@@ -19,7 +19,8 @@
       "string": [
         "one",
         "two",
-        "three"
+        "three",
+        "trending"
       ]
     },
     "isDraft": {
