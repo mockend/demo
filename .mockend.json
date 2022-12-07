@@ -1,21 +1,21 @@
 {
-  "Post": {
+  "id": {
     "cover": {
       "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
     },
-    "title": {
+    "content": {
       "loremWords": {
         "minLength": 5,
         "maxLength": 20
       }
     },
-    "body": {
+    "created_at": {
       "loremParagraphs": {
         "minLength": 10,
         "maxLength": 100
       }
     },
-    "tag": {
+    "updated_at": {
       "string": [
         "one",
         "two",
