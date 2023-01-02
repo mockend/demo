@@ -2,7 +2,7 @@
 
 # Config
 
-[`.mockend.json](.mockend.json) describes an API which has `posts` and `comments`. Below you can find a non-exhaustive list of API calls you can make.
+[`.mockend.json`](.mockend.json) describes an API which has `posts` and `comments`. Below you can find a non-exhaustive list of API calls you can make.
 
 To make modifications, fork or copy this config file and [install](https://github.com/marketplace/mockend) Mockend on your repo.
 
