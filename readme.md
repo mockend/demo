@@ -20,4 +20,4 @@ To make modifications, fork or copy this config file and [install](https://githu
 
 # Try mockend
 
-[**install**](https://github.com/marketplace/mockend)
+[**Install**](https://github.com/marketplace/mockend)
