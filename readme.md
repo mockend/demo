@@ -11,8 +11,8 @@ To make modifications, fork or copy this config file and [install](https://githu
 - https://mockend.com/mockend/demo/posts – Post
 - https://mockend.com/mockend/demo/posts/1 – Post 1
 - https://mockend.com/mockend/demo/posts?createdAt_order=desc – Posts sorted by createdAt
-- https://mockend.com/mockend/demo/posts?tag_eq=one – Posts with tag=one
-- https://mockend.com/mockend/demo/comments?postId=1 – Comments for Post 1
+- https://mockend.com/mockend/demo/posts?category_eq=one – Posts in category one
+- https://mockend.com/mockend/demo/comments?postId_eq=1 – Comments for Post 1
 
 # GraphQL examples
 
