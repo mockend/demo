@@ -22,4 +22,4 @@ The documentation is available at https://docs.mockend.com
 
 # Try mockend
 
-[**Install**](https://github.com/marketplace/mockend)
+[Install](https://github.com/marketplace/mockend) 🚀
