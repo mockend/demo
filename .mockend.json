@@ -1,66 +1,32 @@
-{
-  "Post": {
-    "_": {
-      "items": 10
-    },
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "category": {
-      "string": ["one", "two", "three"]
-    },
-    "isDraft": {
-      "boolean": {}
-    },
-    "views": {
-      "int": {
-        "min": 0,
-        "max": 1000
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    },
-    "comments": {
-      "hasMany": "Comment"
-    }
+[
+  {
+      "userId": 1,
+      "id": 1,
+      "title": "Polokwane Hospital",
+      "body": "12 matlala road"
   },
-  "Comment": {
-    "_": {
-      "items": 25
-    },
-    "email": {
-      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    },
-    "post": {
-      "belongsTo": "Post"
-    }
-  }
+  {
+      "userId": 1,
+      "id": 2,
+      "title": "Pretoria Hospital",
+      "body": "11 havelock road"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "Jozi Hospital",
+    "body": "11 havelock road"
+},
+{
+  "userId": 1,
+  "id": 4,
+  "title": "Nell Hospital",
+  "body": "45 lock road"
+},
+{
+  "userId": 1,
+  "id": 5,
+  "title": "Sosha Hospital",
+  "body": "1125 have road"
 }
+]
