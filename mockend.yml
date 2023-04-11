@@ -1,0 +1,19 @@
+models:
+  Post:
+    hasMany: [Comment]
+    fake:
+      _count: 10
+      cover: { imageURL: [1920, 1080] }
+      title: { loremWords: [5, 20] }
+      body: { loremParagraphs: [10, 100] }
+      category: { oneOfString: [one, two, three] }
+      isDraft: { bool: 20 }
+      views: { int: [0, 1000] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+  Comment:
+    belongsTo: [Post]
+    fake:
+      _count: 25
+      email: email
+      body: { loremParagraphs: [10, 100] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
