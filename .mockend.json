@@ -4,8 +4,118 @@
       "items": 10,
       "data": [
         {
+	"info": {
+		"_postman_id": "233cf96a-d374-4145-89ca-f55884300c0a",
+		"name": "Frontend example",
+		"description": "Example collection for frontend candidates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valid login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"email\":\"test@codeyard.eu\",\n\t\t\"password\": \"letmein\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://us-central1-ria-server-b1103.cloudfunctions.net/authenticate",
+					"protocol": "https",
+					"host": [
+						"us-central1-ria-server-b1103",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\"email\":\"test@codeyard.eu\"}\n}"
+				},
+				"url": {
+					"raw": "https://us-central1-ria-server-b1103.cloudfunctions.net/authenticate",
+					"protocol": "https",
+					"host": [
+						"us-central1-ria-server-b1103",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\"password\":\"4r1K34lam1\"}\n}"
+				},
+				"url": {
+					"raw": "https://us-central1-ria-server-b1103.cloudfunctions.net/authenticate",
+					"protocol": "https",
+					"host": [
+						"us-central1-ria-server-b1103",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+        {
           "title": "First title",
-          "body": "You can use your own data or have random values generated for you."
+          "body": 
+          "You can use your own data or have random values generated for you."
         },
         {
           "title": "Second title",
